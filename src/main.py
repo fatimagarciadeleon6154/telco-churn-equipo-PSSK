@@ -4,7 +4,6 @@ from pathlib import Path
 from src.data_loader import load_and_preprocess_data
 from src.model_trainer import train_and_save_model
 
-
 def load_config(config_path: str = "config/params.yaml") -> dict:
     """Carga el archivo de configuración YAML."""
     path = Path(config_path)
