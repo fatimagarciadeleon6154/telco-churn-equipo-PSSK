@@ -37,10 +37,13 @@ def run_pipeline():
     print("Entrenando y evaluando el modelo...")
     metrics = train_and_save_model(X_train, y_train, X_test, y_test, config)
 
-    # 4. Reporte de métricas finales
-    print("\nResultados del entrenamiento:")
+# 4. Reporte de métricas finales
+    print("\n📈 Resultados del entrenamiento:")
     for metric_name, value in metrics.items():
-        print(f"   - {metric_name}: {value:.4f}")
+        if isinstance(value, (int, float)):
+            print(f"   - {metric_name}: {value:.4f}")
+        else:
+            print(f"   - {metric_name}: {value}")
 
     print(f"\nModelo guardado exitosamente en: {config['model']['output_path']}")
     print("Pipeline finalizado sin errores.")

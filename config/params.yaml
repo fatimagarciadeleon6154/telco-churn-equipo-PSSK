@@ -1,3 +1,8 @@
+paths:
+  raw_data: "data/raw/WA_Fn-UseC_-Telco-Customer-Churn.csv"
+  processed_data: "data/processed/clean_churn.csv"
+  model_path: "models/model.pkl"
+
 data:
   raw_path: "data/raw/WA_Fn-UseC_-Telco-Customer-Churn.csv"
   processed_path: "data/processed/clean_churn.csv"
@@ -5,11 +10,9 @@ data:
   random_state: 42
 
 model:
-  # Opciones esperadas por el ML Engineer: "RandomForest" o "SVM" (o "LogisticRegression")
-  name: "RandomForest"
+  name: "random_forest"
   output_path: "models/model.pkl"
   
-  # Hiperparámetros por algoritmo
   random_forest:
     n_estimators: 100
     max_depth: 10
