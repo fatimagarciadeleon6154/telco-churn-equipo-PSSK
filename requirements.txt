@@ -1,0 +1,7 @@
+#MLOps engineer requirements
+pyyaml
+pandas
+numpy
+scikit-learn
+joblib
+pytest
